@@ -1,6 +1,7 @@
 // import { Button } from '@nextui-org/react';
 // import { Button } from '@radix-ui/themes/dist/cjs/components/button';
-import { Button } from '@radix-ui/themes';
+// import { Switch } from '@radix-ui/react-switch';
+import { Button, Flex, Switch } from '@radix-ui/themes';
 import { useTheme } from 'next-themes';
 
 
@@ -12,9 +13,17 @@ export default function ThemeButton() {
   return (
     <main>
       <div>
-        <Button onClick={() => setTheme('dark')}></Button>
+      <Switch radius="full" defaultChecked onClick={() => setTheme('dark')}/>
+        {/* <Button onClick={() => setTheme('dark')}>
+        </Button> */}
         <Button onClick={() => setTheme('light')}></Button>
       </div>
+
+      <Flex gap="3">
+        <Switch radius="none" defaultChecked />
+        <Switch radius="large" defaultChecked />
+        <Switch radius="full" defaultChecked />
+      </Flex>
     </main>
   )
 }

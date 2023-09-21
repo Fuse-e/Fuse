@@ -40,7 +40,7 @@ export function Header() {
                     </div>
                 </div>
             </div>          
-            {/* <ThemeButton /> */}
+            <ThemeButton />
         </main>
     )
 }
