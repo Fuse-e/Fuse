@@ -19,21 +19,19 @@ const MyApp: AppType<{ session: Session | null }> = ({
   pageProps: { session, ...pageProps },
 }) => {
   return (
-      <ThemeProvider attribute="class">
-        <Theme accentColor="orange" grayColor="slate" panelBackground="solid" radius="large" scaling="95%">
-          <SessionProvider session={session}>
-            <Head> {/* Replace <head> with <Head> */}
-              <title>Flame ⚡</title>
-              <meta name="description" content="Showcase your project as a developer"/>
-              <link rel="icon" href="/favicon.ico" />
-            </Head> {/* Close the <Head> component */}
-            <div className="">
-              <Header />
-              <Component {...pageProps} />
-            </div>
-          </SessionProvider>
-        </Theme>
-      </ThemeProvider>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+      <SessionProvider session={session}>
+         <Head> {/* Replace <head> with <Head> */}
+          <title>Flame ⚡</title>
+          <meta name="description" content="Showcase your project as a developer"/>
+          <link rel="icon" href="/favicon.ico" />
+        </Head> {/* Close the <Head> component */}
+        <div className="">
+          <Header />
+          <Component {...pageProps} />
+         </div>
+      </SessionProvider>
+    </ThemeProvider>
   );
 };
 
