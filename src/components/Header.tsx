@@ -10,37 +10,39 @@ export function Header() {
     const user =session.data?.user
     return (
         <main>
-            <div className="flex justify-center text-center items-center bg-opacity-10 bg-black border-2 rounded-b-lg">
-                <div className="flex bg-black-200 box-border items-center h-10 p-4 border-4">
-                    <div className="p-1 m-5 flex  justify-center text-center items-stretch">
-                        {/* <Heading  className="" size="4">Flame⚡</Heading> */}
-                        <div className="flex justify-center text-center">
-                            <ul className=" flex gap-4 text-sm ">
-                                <li>
-                                    <Link href="/">Home</Link>
-                                </li>
-                                <li>
-                                    <Link href="/">Dev</Link>
-                                </li>
-                                <li>
-                                    <Link href="/">Browse</Link>
-                                </li>
-                                {user != null &&<li>
-                                    <Link href={`/profiles/${user.id}`}>Profile</Link>
-                                </li>}
-                            </ul>
+            <div className="justify-center text-center grid gap-4">
+                    <div className="flex font-bold items-center justify-center p-3 text-center bg-grey-800 fw-50 mx-auto">
+                        <div className="font-bold">
+                        <Button
+                            type="submit"
+                            variant="link"
+                            className=""
+                        >
+                            <Link href="/">Home</Link>
+                        </Button>
                         </div>
-                        <div className="justify-center text-center">  
-                            {user == null ? (
-                                <Button onClick={() =>void signIn()}>Log In</Button>
-                                ) : 
-                                <Button onClick={() => void signOut()}>Sign Out</Button>
-                            }
+                        <div className="font-bold">
+                        <Button
+                            type="submit"
+                            variant="link"
+                            className=" "
+                        >
+                            <a href="/about">Dev</a>
+                        </Button>
                         </div>
+                        <div className="font-bold">
+                        <Button
+                            type="submit"
+                            variant="link"
+                            className=""
+                        >
+                            <a href="/chat">Browse</a>
+                        </Button>
+                        </div>
+                        <ThemeButton />
                     </div>
-                </div>
-            </div>          
-            <ThemeButton />
+            </div>        
         </main>
     )
 }
+
