@@ -13,12 +13,12 @@ export function Header() {
     const user =session.data?.user
     return (
         <main>
-            <div className="fixed top-0 w-full left-0 border-b border-white-ao8">
+            <div className="fixed top-0 w-full left-0 border-b border-white-ao8 backdrop-[12px]">
                 <header className="flex h-[var(--navigation-height)]">
                     <Link className="flex items-center text-md" href="/"></Link>
 
                     <nav className="h-full">
-                        <ul className="flex items-center h-full [&_a]:text-sm [&_li]:ml-6">
+                        <ul className="flex items-center h-full [&_a]:text-sm [&_a:hover]:text-grey [&_a]:transition-colors [&_li]:ml-6">
                             <li>
                                 <Link href="#">Home</Link>
                             </li>
@@ -35,7 +35,7 @@ export function Header() {
                     </nav>
 
                     <div className="ml-auto h-full flex items-center">
-                        <NewButton href={""}>login in</NewButton>
+                        <NewButton  href={""}>login in</NewButton>
                         {/* <ul>
                             {user != null &&<li>
                                     <Link href={`/profiles/${user.id}`}>Profile</Link>

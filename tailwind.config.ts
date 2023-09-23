@@ -15,12 +15,20 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    fontSize: {
+      xs: "1.2rem",
+      sm: "1.4rem",
+      md: "1.6rem",
+      lg: ["2.2rem", "1.3"],
+      "5xl": ["8rem", '1'],
+    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "#000212",
+        grey: "#858699",
         "white-ao8": "rgba(255, 255, 255, 0.08)",
         foreground: "hsl(var(--foreground))",
         primary: {
@@ -72,6 +80,12 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    backgroundImage: {
+      "primary-gradient": "linear-gradient(92.88deg, rgb(69, 94, 181)9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)",
+    },
+    boxShadow: {
+      primary: "rgb(80 63 205 / 50) 0px 1px 40px",
+    }
   },
   plugins: [require("tailwindcss-animate")],
 }

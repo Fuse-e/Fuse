@@ -57,7 +57,14 @@
   * {
     @apply border-border;
   }
-  body {
-    @apply bg-background text-foreground;
+  html {
+    @apply bg-background text-foreground text-white font-sans;
+    font-size: 62.5%;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: rgb(0 0 0 / 56) 0px 3px 12px;
   }
 }

@@ -2,6 +2,7 @@
 // import { Button } from '@nextui-org/react';
 
 import { Card } from "@radix-ui/themes";
+import { Header } from "~/components/Header";
 
 // import { Box, Button, Card, Flex, Inset, Kbd } from "@radix-ui/themes";
 
@@ -12,8 +13,10 @@ import { Card } from "@radix-ui/themes";
 
 export default function Home() {
   return (
-    <main>
-      <h1>dfujgv</h1>
-    </main>
+    <div>
+      <Header />
+      <main />
+      <footer />
+    </div>
   )
 }
