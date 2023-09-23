@@ -60,6 +60,7 @@ module.exports = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,6 +81,23 @@ module.exports = {
         "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
+    spacing: {
+        0: "0",
+        1: "o.4rem",
+        2: "o.8rem",
+        3: "1.2rem",
+        4: "1.6rem",
+        5: "2rem",
+        6: "2.4rem",
+        7: "2.8rem",
+        8: "3.2rem",
+        9: "3.6rem",
+        10: "4rem",
+        11: "4.4rem",
+        12: "4.8rem",
+        13: "5rem",
+
+      },
     backgroundImage: {
       "primary-gradient": "linear-gradient(92.88deg, rgb(69, 94, 181)9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%)",
     },
