@@ -21,15 +21,15 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <SessionProvider session={session}>
-         <Head> {/* Replace <head> with <Head> */}
+         <Head>
           <title>Flame ⚡</title>
           <meta name="description" content="Showcase your project as a developer"/>
           <link rel="icon" href="/favicon.ico" />
-        </Head> {/* Close the <Head> component */}
-        <div className="">
-          <Header />
+        </Head>
+        <Header />
+        <main className="pt-[var(--navigation-height)]">
           <Component {...pageProps} />
-         </div>
+         </main>
       </SessionProvider>
     </ThemeProvider>
   );
