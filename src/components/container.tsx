@@ -4,8 +4,12 @@ import classNames from "classnames"
 export const Container = ({ 
     children,
     className
-}: { children: React.ReactNode;
+    }: { children: React.ReactNode;
     className?: string;
     }) => {
-    return <div className={classNames("max-w-[1200px] mx-auto")}>{children}</div>
+    return (
+    <div className={classNames("max-w-[1200px] mx-auto", className)}>
+        {children}
+    </div>
+    );
 };

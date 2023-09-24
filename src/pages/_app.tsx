@@ -22,8 +22,8 @@ const MyApp: AppType<{ session: Session | null }> = ({
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
       <SessionProvider session={session}>
          <Head>
-          <title>Flame ⚡</title>
-          <meta name="description" content="Showcase your project as a developer"/>
+          <title>Fuse⚡</title>
+          <meta name="description" content="Connect with like minded"/>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Header />

@@ -6,7 +6,11 @@ import { useTheme } from "next-themes"
 import { Button } from "./ui/Button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "./ui/dropdown-menu"
  
-export default function ModeToggle() {
+interface ThemeButtonProps {
+  className?: string;
+}
+
+export default function ThemeButton({ }: ThemeButtonProps) {
   const { setTheme } = useTheme()
  
   return (
@@ -20,15 +24,16 @@ export default function ModeToggle() {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem onClick={() => setTheme("light")}>
-          
+          tghjk
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("dark")}>
-          
+          frtgyhuj
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => setTheme("system")}>
-         
+         iu
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   )
 }
+
