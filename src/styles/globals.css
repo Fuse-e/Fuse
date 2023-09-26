@@ -5,8 +5,8 @@
 @layer base {
   :root {
     --navigation-height: 4.8rem;
-    /* --background: #ffffff; */
-    
+    --background: #f31d1d;
+    --background: linear-gradient(to right bottom, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195));
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -60,14 +60,16 @@
   }
   html {
     @apply text-foreground text-white font-sans;
-    background-color: rgb(142, 142, 142);
+    /* @apply linear-gradient(to right bottom, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195)) */
     font-size: 62.5%;
   }
 
   .dark {
     background-color: #000212;
   }
-
+  .light {
+    background-color: (to right bottom, rgb(199, 210, 254), rgb(254, 202, 202), rgb(254, 249, 195));
+  }
 }
 
 @layer utilities {
